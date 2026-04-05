@@ -10,14 +10,14 @@ public class Computador {
     public void mostraPCConfigs() {
         System.out.println("Informações do dispositivo:");
         System.out.println("Marca: " + this.marca);
-        System.out.println("Sistema Operacional: " + sistemaOperacional.getNome() + "(" + sistemaOperacional.getTipo() + " bits)");
-        System.out.println("Processador: " + hardwares[0].getNome() + "(" + hardwares[0].getCapacidade() + " Mhz)");
+        System.out.println("Sistema Operacional: " + sistemaOperacional.getNome() + " (" + sistemaOperacional.getTipo() + " bits)");
+        System.out.println("Processador: " + hardwares[0].getNome() + " (" + hardwares[0].getCapacidade() + " Mhz)");
         System.out.println("Memória interna: " + hardwares[1].getNome() + " de " + hardwares[1].getCapacidade() + " GB");
         System.out.println("Armazenamento interno: " + hardwares[2].getNome() + " de " + hardwares[2].getCapacidade() + " GB");
         if(musb != null) {
             System.out.println("* Acompanha " + musb.getNome() + " de " + musb.getCapacidade() + " GB");
         }
-        System.out.println("\nPreço: R$" + this.preco);
+        System.out.println("    Preço: R$" + String.format("%.2f", this.preco) + "\n");
     }
 
     public void addMemoriaUSB(MemoriaUSB musb) {
